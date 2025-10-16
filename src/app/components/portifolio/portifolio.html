@@ -1,0 +1,49 @@
+<div class="container mx-auto">
+  <div class="grid lg:grid-cols-3 gap-4">
+    <div class="p-4 flex items-center justify-center">
+      <img
+        class="w-[200px]"
+        src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1046482274-square.jpg"
+        alt="Nicolas Cage"
+      />
+    </div>
+    <div class="lg:col-span-2 p-4 flex flex-col items-center lg:items-start justify-center gap-4">
+      <div class="text-3xl font-bold">Nicolas Cage</div>
+      <div class="flex gap-2">
+        <div class="text-sm text-white bg-purple-500 px-4 py-1 rounded">C#</div>
+        <div class="text-sm text-white bg-orange-500 px-4 py-1 rounded">HTML</div>
+        <div class="text-sm bg-yellow-500 px-4 py-1 rounded">JS</div>
+      </div>
+      <div class="flex gap-2">
+        <i class="lab la-facebook-f text-4xl text-blue-600"></i>
+        <i class="lab la-instagram text-4xl text-pink-600"></i>
+        <i class="lab la-linkedin-in text-4xl text-blue-900"></i>
+      </div>
+    </div>
+  </div>
+  <div class="p-4 border-t-1">
+    Nicolas Cage, nascido Nicolas Kim Coppola em 7 de janeiro de 1964, é um dos atores mais
+    versáteis e enigmáticos de Hollywood. Membro da renomada família Coppola, Cage construiu uma
+    carreira marcada por atuações intensas, escolhas ousadas e uma presença magnética nas telas.
+    Vencedor do Oscar de Melhor Ator por Leaving Las Vegas e indicado novamente por Adaptation, ele
+    transita com facilidade entre dramas profundos, comédias excêntricas e thrillers sombrios. Ao
+    longo de mais de quatro décadas de carreira, Cage se tornou um ícone cultural, conhecido tanto
+    por seu talento quanto por sua imprevisibilidade artística. Atualmente, aos 61 anos, ele
+    continua surpreendendo o público com papéis desafiadores e projetos inovadores, mesmo enquanto
+    considera uma aposentadoria em breve
+  </div>
+  <div class="grid lg:grid-cols-3 gap-4">    
+    <app-movie-card
+      titulo="Dream Scenario (O Homem dos Sonhos)"
+      texto="movie.texto"
+      (onRemoveClicked)="onRemoveClicked($event)"
+      img="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/02/longlegs-2024-movie-poster.jpg"
+    ></app-movie-card>
+    <app-movie-card
+      [titulo]="titulo"
+      texto="movie.texto"
+      (onRemoveClicked)="onRemoveClicked($event)"
+      img="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/02/longlegs-2024-movie-poster.jpg"
+    ></app-movie-card>    
+  </div>
+</div>

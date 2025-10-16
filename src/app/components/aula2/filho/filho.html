@@ -1,0 +1,12 @@
+  <td>{{ pessoa?.nome }}</td>
+  <td>{{ pessoa?.idade }}</td>
+  <td>
+    @if (pessoa?.vivo) {
+    <div class="bg-green-500 text-white">Vivo</div>
+    } @else {
+    <div class="bg-red-500 text-white">Morto</div>
+    }
+  </td>
+  <td>
+    <button (click)="remover()">Remover</button>
+  </td>

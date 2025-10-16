@@ -1,0 +1,43 @@
+<h1>Pessoa</h1>
+<p>Nome: {{ pessoa.nome }}</p>
+<p [innerHTML]="html"></p>
+
+<button (click)="vivoMorto()" class="p-4" [class.bg-red-500]="!vivo" [class.bg-green-500]="vivo">
+  @if (vivo) {
+  <div class="text-white">Vivo</div>
+  } @else {
+  <div class="text-white">Morto</div>
+  }
+
+  <div *ngIf="vivo">Vivo</div>
+  <div *ngIf="!vivo">Morto</div>
+</button>
+
+<hr />
+
+<h1>Pessoas</h1>
+
+<div class="flex gap-4">
+  <button class="bg-green-500 text-white p-4 rounded" (click)="addPessoa()">
+    Adicionar pessoa
+  </button>
+  <button class="bg-red-500 text-white p-4 rounded" (click)="matar(0)">Matar</button>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Vivo</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(p of pessoas; track p; let i = $index) {
+    <tr>
+      <app-filho [pessoa]="p"
+        (onRemove)="remove($event, i)"
+      ></app-filho>
+    </tr>
+    }
+  </tbody>
+</table>
