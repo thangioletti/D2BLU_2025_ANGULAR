@@ -34,7 +34,8 @@
   <tbody>
     @for(p of pessoas; track p; let i = $index) {
     <tr>
-      <app-filho [pessoa]="p"
+      <app-filho 
+        [pessoa]="p"
         (onRemove)="remove($event, i)"
       ></app-filho>
     </tr>

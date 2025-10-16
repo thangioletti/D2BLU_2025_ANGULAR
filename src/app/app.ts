@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { Pai } from "./components/aula2/pai/pai";
+import { Menu } from "./core/menu/menu";
+import { RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  imports: [Pai]
+  imports: [Menu, RouterOutlet]
 })
 export class App {
 
